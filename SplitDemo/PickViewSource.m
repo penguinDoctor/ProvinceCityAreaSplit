@@ -13,12 +13,7 @@
 @property(nonatomic,strong)CityPickerView *pickerView;
 //总的数组
 @property(nonatomic,copy)NSArray *totalAry;
-//省
-@property(nonatomic,copy)NSArray *provinceAry;
-//市
-@property(nonatomic,copy)NSArray *cityAry;
-//区
-@property(nonatomic,copy)NSArray *areaAry;
+
 //记录选中的省的下标
 @property(nonatomic,assign) NSInteger selectProvinceIndex;
 //记录选中的市的下标
@@ -33,9 +28,6 @@
     PickViewSource * source =[[PickViewSource alloc]init];
     
     source.totalAry = item;
-    source.provinceAry = source.totalAry.firstObject;
-    source.cityAry = source.totalAry[1];
-    source.areaAry = source.totalAry.lastObject;
     
     source.pickerView = pickerView;
     
